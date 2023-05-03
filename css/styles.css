@@ -19,7 +19,19 @@ body {
     background-color: var(--white-background-text-color);
 }
 
-/* Components */
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+ul {
+    margin: 0;
+    padding-left: 0;
+}
+img {
+    display: block;
+    min-width: 100%;
+    height: auto;
+}
+/* ==========Components========== */
 .link {
     text-decoration: none;
 }
@@ -60,9 +72,30 @@ body {
     text-transform: capitalize;
     color: var(--dark-color);
 }
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
-/* Navigation menu */
+/* =========== Navigation menu ========== */
+
+.header {
+    border-bottom: 1px solid var(--accent-color);
+}
+.header-container {
+    display: flex;
+    align-self: center;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
 .logo {
+    margin-right: 76px;
+    display: inline-block;
+
     font-family: 'Raleway', sans-serif;
     font-weight: 800;
     font-size: 18px;
@@ -71,12 +104,19 @@ body {
     text-transform: uppercase;
     color: var(--primary-brand-color);
 }
-
 .logo-text {
     color: var(--dark-color);
 }
-
+.menu-list {
+    display: flex;
+}
+.menu-list .menu-item:not(:last-child) {
+    margin-right: 40px;
+}
 .menu-link {
+    display: block;
+    padding: 24px 0;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -90,7 +130,16 @@ body {
 .contact {
     font-style: normal;
 }
+.contact-list {
+    display: flex;
+}
+.contact-list .contact-item:not(:last-child) {
+    margin-right: 40px;
+}
 .contact-link {
+    display: block;
+    padding: 24px 0;
+
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -103,12 +152,17 @@ body {
     color: var(--pressed-state-color);
 }
 
-/* Hero main page */
+/* ========== Hero =========*/
 
 .hero{
     background: var(--dark-color);
+    padding: 188px 0;
+    margin-bottom: 120px;
 }
 .hero-title{
+    width: 496px;
+    margin: 0 auto;
+
     font-weight: 700;
     font-size: 56px;
     line-height: 1.07;
@@ -117,8 +171,11 @@ body {
     color: var(--white-background-text-color)
 }
 .hero-btn {
+    display: block;
+    margin: 48px auto 0 auto;
+
     font-family: 'Roboto', sans-serif ;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     left: 636px;
     top: 428px;
@@ -131,18 +188,85 @@ body {
     background-color: var(--pressed-state-color);
 }
 
-/*Our team */
+/* =========== Company advantages ========== */
+
+.advantages-container {
+    margin-bottom: 120px;
+}
+.advantages-list {
+    display: flex;
+}
+.advantages-list .advantages-item:not(:last-child) {
+    margin-right: 24px;
+}
+.advantages-item {
+    width: calc((100%-3*24px)/4);
+}
+.list-title {
+    margin-bottom: 8px;
+}
+
+/* =========== What are we doing ========== */
+
+.about-container {
+    margin-bottom: 120px;
+}
+.about-title {
+    margin-bottom: 72px;
+}
+.about-list {
+    display: flex;
+}
+.about-list .about-item:not(:last-child) {
+    margin-right: 24px;
+}
+.about-item {
+    width: calc((100%-2*24)/3);
+}
+
+/* ============ Our team =========== */
 
 .team {
-    background-color: var(--light-mode-color);
+    padding: 120px 0;
+
+    background-color: var(--light-mode-color);  
+}
+.team-title {
+    margin-bottom: 72px;
+}
+.team-list {
+    display: flex;
+}
+.team-list .team-item:not(:last-child) {
+    margin-right: 24px;
 }
 .team-item {
+    width: calc((100%-3*24px)/4);
+
     background-color: var(--white-background-text-color);
 }
+.employee {
+    padding: 32px 16px;
+}
+.employee-name {
+    text-align: center;
+    margin-bottom: 8px;
+}
+.profession {
+    text-align: center;
+}
 
-/* Filters */
+/* ========== Filters ========= */
 
+.filter-list {
+    display: flex;
+    justify-content: center;
+    margin: 96px auto 72px auto;
+    gap: 24px;
+}
 .filter-btn {
+    padding: 12px 24px;
+
     font-family: 'Roboto', sans-serif;
     background: var(--light-mode-color);
     border: 1px solid var(--accent-color);
@@ -155,14 +279,49 @@ body {
     color: var(--white-background-text-color);
 }
 
-/* Footer */
+/* ========== Project cards ========== */
+
+.project-cards {
+    margin-bottom: 120px;
+    /* margin-right: 0;
+    padding: 0; */
+}
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 24px;
+    row-gap: 48px;
+}
+.card-item:nth-child(3n) {
+    margin-right: 0;
+}
+.card-link {
+    width: calc((100%-48px)/3);
+}
+.card-description {
+    padding: 32px 16px;
+    border: 1px solid var(--accent-color);
+    border-top: none;
+}
+.card-title {
+    margin-bottom: 8px;
+}
+
+/* ========== Footer ========== */
+
 .footer{
     background-color: var(--dark-color);
+    padding: 100px 0;
+}
+.logo-footer {
+    margin-bottom: 16px;
 }
 .logo-text-footer{
     color: var(--light-mode-color);
 }
 .footer-description {
+    width: 264px;
+
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
