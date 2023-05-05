@@ -157,7 +157,6 @@ img {
 .hero{
     background: var(--dark-color);
     padding: 188px 0;
-    margin-bottom: 120px;
 }
 .hero-title{
     width: 496px;
